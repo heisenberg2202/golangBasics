@@ -1,0 +1,16 @@
+go 1.20
+
+use (
+	./02variables
+	./03userinput
+	./04conversion
+	./05mytime
+	./07mypointers
+	./08myarray
+	./09myslices
+	./11mystructs
+	./12ifelse
+	./13switchcase
+	./14loops
+	./15functions
+)
