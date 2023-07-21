@@ -13,5 +13,6 @@ use (
 	./13switchcase
 	./14loops
 	./15functions
+	./callrestfulapi
 	./web-service-gin
 )
