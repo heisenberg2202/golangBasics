@@ -14,5 +14,6 @@ use (
 	./14loops
 	./15functions
 	./callrestfulapi
+	./quickstartmongo
 	./web-service-gin
 )
