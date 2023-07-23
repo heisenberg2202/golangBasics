@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -17,7 +18,7 @@ func main() {
 	}
 	uri := os.Getenv("MONGODB_URI")
 	if uri == "" {
-		log.Fatal("You must set your 'MONGODB_URI' environmental variable. See\n\t https://www.mongodb.com/docs/drivers/go/current/usage-examples/#environment-variable")
+		log.Fatal("You must set your 'MONGODB_URI' environmental variable.")
 	}
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
 	if err != nil {
@@ -28,12 +29,12 @@ func main() {
 			panic(err)
 		}
 	}()
-	coll := client.Database("sample_mflix").Collection("movies")
-	title := "Back to the Future"
+	coll := client.Database("sample_airbnb").Collection("listingsAndReviews")
+	name := "Copacabana Apartment Posto 6"
 	var result bson.M
-	err = coll.FindOne(context.TODO(), bson.D{{Key: "title", Value: title}}).Decode(&result)
+	err = coll.FindOne(context.TODO(), bson.D{{Key: "name", Value: name}}).Decode(&result)
 	if err == mongo.ErrNoDocuments {
-		fmt.Printf("No document was found with the title %s\n", title)
+		fmt.Printf("No document was found with the name %s\n", name)
 		return
 	}
 	if err != nil {
