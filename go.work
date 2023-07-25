@@ -15,6 +15,7 @@ use (
 	./15functions
 	./16methods
 	./17defer
+	./18files
 	./callrestfulapi
 	./quickstartmongo
 	./web-service-gin
