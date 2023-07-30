@@ -17,12 +17,11 @@ func main() {
 	fmt.Println(isLoggedIn)
 	fmt.Printf("Variable is of type: %T \n",isLoggedIn )
 
-
+           
 	
 	var smallVal uint8 = 255
 	fmt.Println(smallVal)
-	fmt.Printf("Variable is of type: %T \n",smallVal )
-
+	fmt.Printf("Variable is of type: %T \n",smallVal)
 
 	var val int = 255
 	fmt.Println(val)
@@ -49,6 +48,7 @@ func main() {
 	fmt.Println(website)
 
 	// no var style
+  fmt.Println("Hello lets goooooooooooo"); 
 
 	numberOfUser := 30000
 	fmt.Println(numberOfUser)
